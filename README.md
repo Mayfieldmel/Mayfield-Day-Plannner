@@ -4,7 +4,7 @@ This repo houses the assets used to build the Mayfield Day Planner, available at
 
 ![Day Planner](./assets/images/day-planner.gif)
 
-## The Quiz
+## The Planner
 
 The Mayfield Day Planner is a work-day scheduling app that allows users to create, monitor, and edits tasks for each hour of the 9-5 workday.
 
