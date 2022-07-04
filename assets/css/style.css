@@ -4,12 +4,12 @@ body {
   line-height: 1;
 }
 
-.textarea {
+textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
-  /* border-left: 1px solid black; */
+  border-left: 1px solid black;
   padding: 10px;
   width: 105%;
   height: 71%;
@@ -18,7 +18,7 @@ body {
   right: 15px
 }
 
-.textarea:focus {
+textarea:focus {
   outline: none;
     box-shadow: 0 0 5px rgb(6, 53, 66);
     border: 2px solid rgb(26, 197, 245);
@@ -52,6 +52,7 @@ body {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  text-align: right;
 }
 
 .past {
@@ -76,6 +77,9 @@ body {
   background-color: #06AED5;
   color: white;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .saveBtn i:hover {
