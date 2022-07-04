@@ -1,6 +1,6 @@
 # Mayfield Day Planner
 
-This repo houses the assets used to build the Mayfield Day Planner, available at https://mayfieldmel.github.io/Mayfield-Code-Quiz/ .
+This repo houses the assets used to build the Mayfield Day Planner, available at https://mayfieldmel.github.io/Mayfield-Day-Plannner/ .
 
 ![Day Planner](./assets/images/day-planner.gif)
 
