@@ -2,6 +2,22 @@
 var today = document.querySelector("#currentDay");
     today.textContent = moment().format("dddd, MMMM Do");
 
+
+// retrieve stored data
+$(function(){
+    $(".hour").each(function(index) { 
+        var hour = $(this)
+            .text();
+            console.log(hour)
+        $(this)
+            .next()
+            .children()
+            .text(localStorage.getItem(hour));
+            console.log(localStorage.getItem(hour))
+        })
+    });
+      
+
 // loop through each hour time block
 $(".hour").each(function(index) {
     // isolate the number
@@ -32,55 +48,24 @@ $(".hour").each(function(index) {
     }
 });
 
-var textInput;
 
 // add tasks to time blocks
-$(".row").on("click", ".textarea", function() {
-    console.log("click");
-    // var text = $(this)
-    //     .text()
-    //     .trim();
-    // if()
-    var textBox = $("<textarea>")
-        .addClass("textarea");
-    $(this).replaceWith(textBox)
-    textBox.trigger("focus");
-
-    var textInput = $(textBox)
-    .val();
-    console.log(textInput);
-});
-
-
-$(".row").on("blur", ".textarea", function() {
-    console.log(textInput);
-    console.log(this);
-    var text = $(this)
-        .text()
-        .trim();
-    var taskP = $("<p>")
-        .addClass("textarea")
-        .val(text);
-    $(this).replaceWith(taskP);
-    // var index = $(this)
-    //     .index();
-    console.log(text);
-});
-
-
 $(".time-block").on("click", "button", function() {     
     console.log("click", this)
     textArea = $(this)
         .prev()
-        .children();
+        .children()
+        .val();
         console.log(textArea);
-
+    var timeValue = $(this)
+        .prev()
+        .prev()
+        .text()
+        console.log(timeValue);
+    // save to local storage
+        localStorage.setItem( timeValue, textArea)
 });
 
-
-   // task = $(this)
-    // .text()
-    // .trim();
 
 // audit status every 30 minutes
 setInterval(function() {
@@ -109,4 +94,5 @@ setInterval(function() {
         }
         console.log("refresh")
     });
+    // 30 mins in milliseconds
     }, (1000 * 60) * 30);
