@@ -1,7 +1,6 @@
 // current date in header
-var today = document.querySelector("#currentDay");
-    today.textContent = moment().format("dddd, MMMM Do");
-
+$("#currentDay")
+    .text(moment().format("dddd, MMMM Do"));
 
 // retrieve stored data
 $(function(){
